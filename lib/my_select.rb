@@ -2,7 +2,9 @@ def my_select(collection)
   i = 0
   new_array = []
   while i < collection.length
-  new_array<< (yield collection[i.include?()])
+    if yield collection[i]
+     new_array << collection[i]
+    end
     i = i + 1
   end
   new_array
